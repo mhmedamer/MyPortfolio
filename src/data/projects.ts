@@ -21,12 +21,10 @@ export type Project = {
 const projects: Project[] = [
   {
     title: "Synkra Blog Details",
-    description:
-      "A responsive Blog Details page developed with React as part of a team project.",
+    description: "A responsive Blog Details page developed with React as part of a team project.",
     technologies: ["React", "JavaScript", "CSS", "Git", "GitHub"],
     role: "Front-End Developer",
-    contribution:
-      "Developed the Blog Details page and worked on responsive implementation.",
+    contribution: "Developed the Blog Details page and worked on responsive implementation.",
     liveDemo: "https://mhmedamer.github.io/Synkra-company/",
     github: "",
     image: synkraImage.url,

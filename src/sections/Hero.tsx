@@ -25,9 +25,7 @@ export function Hero() {
           <h1 className="mt-6 text-4xl font-semibold leading-[1.1] sm:text-5xl lg:text-6xl">
             {personalInfo.name}
           </h1>
-          <p className="mt-3 text-xl font-medium text-gradient sm:text-2xl">
-            {personalInfo.title}
-          </p>
+          <p className="mt-3 text-xl font-medium text-gradient sm:text-2xl">{personalInfo.title}</p>
 
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
             {personalInfo.intro}
@@ -66,17 +64,13 @@ export function Hero() {
             <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/40" />
             <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/40" />
             <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/40" />
-            <span className="ml-2 font-mono text-xs text-muted-foreground">
-              developer.js
-            </span>
+            <span className="ml-2 font-mono text-xs text-muted-foreground"> developer.js</span>
           </div>
           <pre className="overflow-x-auto px-4 py-5 font-mono text-[13px] leading-7 text-muted-foreground sm:text-sm">
             {codeLines.map((line, i) => (
               <div key={line.text} className="flex gap-4">
                 <span className="select-none text-muted-foreground/40">{i + 1}</span>
-                <code className={i === 0 || i === 6 ? "text-primary" : undefined}>
-                  {line.text}
-                </code>
+                <code className={i === 0 || i === 6 ? "text-primary" : undefined}>{line.text}</code>
               </div>
             ))}
           </pre>

@@ -9,8 +9,7 @@ export function useTheme() {
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY) as Theme | null;
     const initial: Theme =
-      stored ??
-      (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      stored ?? (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
     setTheme(initial);
   }, []);
 
@@ -19,10 +18,7 @@ export function useTheme() {
     localStorage.setItem(STORAGE_KEY, theme);
   }, [theme]);
 
-  const toggleTheme = useCallback(
-    () => setTheme((t) => (t === "dark" ? "light" : "dark")),
-    [],
-  );
+  const toggleTheme = useCallback(() => setTheme((t) => (t === "dark" ? "light" : "dark")), []);
 
   return { theme, toggleTheme };
 }

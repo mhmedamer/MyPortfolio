@@ -79,9 +79,7 @@ export function Contact() {
               <li key={item.label}>
                 <a
                   href={item.href}
-                  {...(item.external
-                    ? { target: "_blank", rel: "noreferrer noopener" }
-                    : {})}
+                  {...(item.external ? { target: "_blank", rel: "noreferrer noopener" } : {})}
                   className="card-surface card-hover flex items-center gap-4 p-4"
                 >
                   <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent text-accent-foreground">
@@ -91,9 +89,7 @@ export function Contact() {
                     <span className="block text-xs uppercase tracking-wider text-muted-foreground">
                       {item.label}
                     </span>
-                    <span className="block truncate text-sm font-medium">
-                      {item.value}
-                    </span>
+                    <span className="block truncate text-sm font-medium">{item.value}</span>
                   </span>
                 </a>
               </li>

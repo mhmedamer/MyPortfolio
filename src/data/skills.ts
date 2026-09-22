@@ -12,7 +12,13 @@ export const skillGroups: SkillGroup[] = [
   {
     category: "WordPress Development",
     note: "Hands-on experience building and maintaining WordPress websites.",
-    items: ["WordPress", "Elementor", "Custom Themes", "Website Maintenance", "Database Management"],
+    items: [
+      "WordPress",
+      "Elementor",
+      "Custom Themes",
+      "Website Maintenance",
+      "Database Management",
+    ],
   },
   {
     category: "Development Experience",
@@ -39,8 +45,7 @@ export const experienceAreas = [
   {
     title: "Problem Solving",
     status: "Practical Experience",
-    description:
-      "Breaking problems down and solving coding challenges consistently.",
+    description: "Breaking problems down and solving coding challenges consistently.",
     why: "To build the reasoning habits that good development work depends on.",
   },
 ];

@@ -1,24 +1,55 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { Hero } from "@/sections/Hero";
+import { About } from "@/sections/About";
+import { Skills } from "@/sections/Skills";
+import { Projects } from "@/sections/Projects";
+import { Learning } from "@/sections/Learning";
+import { Journey } from "@/sections/Journey";
+import { Contact } from "@/sections/Contact";
+import { useReveal } from "@/hooks/useReveal";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Muhammed Amer | Junior Front-End Developer";
+const description =
+  "Portfolio of Muhammed Amer, a Junior Front-End Developer focused on React, JavaScript, responsive web development, and continuous technical learning.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
+  useReveal();
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-primary focus:px-4 focus:py-2 focus:text-primary-foreground"
+      >
+        Skip to content
+      </a>
+      <Navbar />
+      <main id="main">
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Learning />
+        <Journey />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }

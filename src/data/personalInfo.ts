@@ -5,9 +5,9 @@
  */
 const personalInfo = {
   name: "Muhammed Amer",
-  title: "Junior Front-End Developer",
+  title: "Junior Front-End & WordPress Developer",
   intro:
-    "Front-End Developer focused on building responsive, user-friendly web experiences with React and modern web technologies.",
+    "Front-End and WordPress Developer building responsive, interactive websites with React, Elementor, custom themes, and database-driven content.",
   email: "mhmedamer72@gmail.com",
   phone: "+201012575937",
   phoneDisplay: "+20 101 257 5937",

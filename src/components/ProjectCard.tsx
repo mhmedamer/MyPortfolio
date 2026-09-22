@@ -1,16 +1,20 @@
-import { ExternalLink, Github, Folder } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import type { Project } from "@/data/projects";
 import { ButtonLink } from "./Button";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
-    <article className="card-surface card-hover flex h-full flex-col p-6" data-reveal>
-      <div
-        className="flex h-32 items-center justify-center rounded-lg border border-border bg-muted"
-        aria-hidden="true"
-      >
-        <Folder className="h-8 w-8 text-primary" />
-      </div>
+    <article className="card-surface card-hover flex h-full flex-col overflow-hidden" data-reveal>
+      <a href={project.liveDemo} target={project.liveDemo.startsWith("http") ? "_blank" : undefined} rel={project.liveDemo.startsWith("http") ? "noreferrer noopener" : undefined}>
+        <img
+          src={project.image}
+          alt={project.imageAlt}
+          className="h-44 w-full border-b border-border object-cover object-top"
+          loading="lazy"
+        />
+      </a>
+
+      <div className="flex flex-1 flex-col p-6">
 
       <h3 className="mt-5 text-lg font-semibold">{project.title}</h3>
       <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
@@ -40,7 +44,7 @@ export function ProjectCard({ project }: { project: Project }) {
         ))}
       </ul>
 
-      <div className="mt-6 flex flex-wrap gap-2 pt-1">
+      <div className="mt-auto flex flex-wrap gap-2 pt-6">
         {project.liveDemo ? (
           <ButtonLink
             href={project.liveDemo}
@@ -61,6 +65,7 @@ export function ProjectCard({ project }: { project: Project }) {
         {!project.liveDemo && !project.github ? (
           <span className="text-xs text-muted-foreground">Links coming soon</span>
         ) : null}
+      </div>
       </div>
     </article>
   );

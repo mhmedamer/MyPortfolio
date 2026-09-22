@@ -10,34 +10,35 @@ export const skillGroups: SkillGroup[] = [
     items: ["HTML5", "CSS3", "JavaScript", "React", "Responsive Web Design"],
   },
   {
-    category: "Tools & Workflow",
-    items: ["Git", "GitHub", "WordPress", "Deployment", "Figma to Code"],
+    category: "WordPress Development",
+    note: "Hands-on experience building and maintaining WordPress websites.",
+    items: ["WordPress", "Elementor", "Custom Themes", "Website Maintenance", "Database Management"],
   },
   {
-    category: "Currently Learning",
-    note: "Studying now — not claimed as professional expertise.",
-    items: ["SQL", "Algorithms & Data Structures", "Problem Solving"],
+    category: "Development Experience",
+    note: "Technologies and practices I have worked with.",
+    items: ["SQL", "Git", "GitHub", "Deployment", "Figma to Code", "Problem Solving"],
   },
 ];
 
-export const learningPaths = [
+export const experienceAreas = [
   {
     title: "SQL",
-    status: "Currently Learning",
+    status: "Hands-on Experience",
     description:
-      "Relational database basics: tables, relationships, queries and joins.",
-    why: "To understand how the data behind an interface is stored and requested.",
+      "Worked with databases and SQL concepts including tables, relationships, queries, and content management.",
+    why: "To manage and understand the data behind interactive websites.",
   },
   {
     title: "Algorithms & Data Structures",
-    status: "Actively Studying",
+    status: "Working Knowledge",
     description:
-      "Core structures and algorithmic thinking, practised through regular exercises.",
+      "Applied core structures and algorithmic thinking through development tasks and coding exercises.",
     why: "To write cleaner, more efficient code and prepare for technical interviews.",
   },
   {
     title: "Problem Solving",
-    status: "Improving",
+    status: "Practical Experience",
     description:
       "Breaking problems down and solving coding challenges consistently.",
     why: "To build the reasoning habits that good development work depends on.",
@@ -51,6 +52,9 @@ export const capabilities = [
   "Front-End UI Development",
   "Figma to Front-End Implementation",
   "WordPress Websites",
+  "Elementor Websites",
+  "Custom WordPress Themes",
+  "WordPress Maintenance",
 ];
 
 export const journey = [
@@ -80,8 +84,8 @@ export const journey = [
   },
   {
     year: "Now",
-    title: "SQL, Algorithms & Data Structures",
+    title: "Front-End & WordPress Development",
     description:
-      "Continuing with responsive design practice while studying SQL and algorithms to strengthen my fundamentals.",
+      "Building and maintaining interactive WordPress websites with Elementor, custom themes, databases, and responsive front-end development.",
   },
 ];

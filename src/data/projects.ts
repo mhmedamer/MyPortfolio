@@ -1,3 +1,7 @@
+import synkraImage from "@/assets/projects/synkra-project.png.asset.json";
+import portfolioImage from "@/assets/projects/portfolio-project.png.asset.json";
+import cafeImage from "@/assets/projects/cafe-project.png.asset.json";
+
 export type Project = {
   title: string;
   description: string;
@@ -10,6 +14,8 @@ export type Project = {
   github: string;
   /** Label override for the live link, e.g. "Current Website". */
   liveLabel?: string;
+  image: string;
+  imageAlt: string;
 };
 
 const projects: Project[] = [
@@ -21,8 +27,10 @@ const projects: Project[] = [
     role: "Front-End Developer",
     contribution:
       "Developed the Blog Details page and worked on responsive implementation.",
-    liveDemo: "",
+    liveDemo: "https://mhmedamer.github.io/Synkra-company/",
     github: "",
+    image: synkraImage.url,
+    imageAlt: "Synkra website sign-in page",
   },
   {
     title: "Personal Portfolio",
@@ -32,14 +40,18 @@ const projects: Project[] = [
     liveDemo: "/",
     liveLabel: "Current Website",
     github: "",
+    image: portfolioImage.url,
+    imageAlt: "Muhammed Amer personal portfolio homepage",
   },
   {
     title: "Café / Restaurant Website",
     description:
       "A responsive website for displaying menu items, categories, and promotional content.",
     technologies: ["HTML", "CSS", "JavaScript"],
-    liveDemo: "",
+    liveDemo: "https://mhmedamer.github.io/bonashmawy/",
     github: "",
+    image: cafeImage.url,
+    imageAlt: "Bon Ashmawy café website homepage",
   },
 ];
 

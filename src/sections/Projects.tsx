@@ -8,7 +8,7 @@ export function Projects() {
       <SectionHeading
         eyebrow="Projects"
         title="Selected work"
-        description="Projects I built while learning and practising Front-End development."
+        description="Selected websites that demonstrate my practical Front-End development experience."
       />
       <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (

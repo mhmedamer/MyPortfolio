@@ -35,7 +35,7 @@ const projects: Project[] = [
   {
     title: "Personal Portfolio",
     description:
-      "A responsive personal portfolio website built to showcase my Front-End development skills, projects, and learning journey.",
+      "A responsive personal portfolio website built to showcase my Front-End and WordPress development experience and projects.",
     technologies: ["React", "JavaScript", "CSS"],
     liveDemo: "/",
     liveLabel: "Current Website",

@@ -77,11 +77,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Muhammed Amer | Junior Front-End Developer" },
+      { title: "Muhammed Amer | Front-End & WordPress Developer" },
       {
         name: "description",
         content:
-          "Portfolio of Muhammed Amer, a Junior Front-End Developer focused on React, JavaScript, responsive web development, and continuous technical learning.",
+          "Portfolio of Muhammed Amer, a Junior Front-End and WordPress Developer experienced with React, Elementor, custom themes, website maintenance, and databases.",
       },
       { name: "author", content: "Muhammed Amer" },
       { property: "og:type", content: "website" },

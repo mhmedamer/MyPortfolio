@@ -7,7 +7,7 @@ export function Journey() {
       <SectionHeading
         eyebrow="Journey"
         title="From surveying to the browser"
-        description="A short timeline of how I moved into Front-End Development."
+        description="A short timeline of my growth in Front-End and WordPress Development."
       />
 
       <ol className="mt-10 space-y-0 border-l border-border pl-6 sm:pl-8">

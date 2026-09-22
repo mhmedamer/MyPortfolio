@@ -9,7 +9,7 @@ export function Skills() {
         <SectionHeading
           eyebrow="Skills"
           title="Technologies I work with"
-          description="The tools I use day to day, plus the subjects I am actively studying right now."
+          description="The technologies and practices I have used across Front-End and WordPress projects."
         />
         <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((group) => (

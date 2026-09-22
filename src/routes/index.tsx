@@ -10,9 +10,9 @@ import { Journey } from "@/sections/Journey";
 import { Contact } from "@/sections/Contact";
 import { useReveal } from "@/hooks/useReveal";
 
-const title = "Muhammed Amer | Junior Front-End Developer";
+const title = "Muhammed Amer | Front-End & WordPress Developer";
 const description =
-  "Portfolio of Muhammed Amer, a Junior Front-End Developer focused on React, JavaScript, responsive web development, and continuous technical learning.";
+  "Portfolio of Muhammed Amer, a Junior Front-End and WordPress Developer experienced with React, Elementor, custom themes, website maintenance, and databases.";
 
 export const Route = createFileRoute("/")({
   head: () => ({

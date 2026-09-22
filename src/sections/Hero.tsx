@@ -5,9 +5,9 @@ import { ButtonLink } from "@/components/Button";
 const codeLines = [
   { text: "const developer = {", indent: 0 },
   { text: '  name: "Muhammed Amer",', indent: 0 },
-  { text: '  role: "Front-End Developer",', indent: 0 },
-  { text: '  stack: ["React", "JavaScript", "CSS"],', indent: 0 },
-  { text: '  learning: ["SQL", "Algorithms"],', indent: 0 },
+  { text: '  role: "Front-End & WordPress Developer",', indent: 0 },
+  { text: '  stack: ["React", "WordPress", "Elementor"],', indent: 0 },
+  { text: '  experience: ["SQL", "Custom Themes"],', indent: 0 },
   { text: "  openToWork: true,", indent: 0 },
   { text: "};", indent: 0 },
 ];
@@ -19,7 +19,7 @@ export function Hero() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-3 py-1 font-mono text-xs text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-primary" aria-hidden="true" />
-            Open to Front-End roles & internships
+            Open to Front-End & WordPress opportunities
           </span>
 
           <h1 className="mt-6 text-4xl font-semibold leading-[1.1] sm:text-5xl lg:text-6xl">

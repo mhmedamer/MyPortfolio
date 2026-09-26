@@ -154,10 +154,7 @@ export function Contact() {
                 className="text-xs leading-relaxed text-muted-foreground"
                 role="status"
                 aria-live="polite"
-              >
-                {notice ||
-                  "No email service is connected yet, so this form does not send messages."}
-              </p>
+              ></p>
             </div>
           </form>
         </div>

@@ -71,21 +71,36 @@ export const journey = [
   },
   {
     year: "2024",
-    title: "Started Front-End Development",
+    title: "Started programing career",
     description:
-      "Learned HTML, CSS and JavaScript fundamentals and built my first responsive pages.",
+      "Learned Algorithmes, Database and SQl servers moreover JavaScript fundamentals to organize and attach the backend side with frontend aspect.",
   },
   {
-    year: "2024",
+    year: "2025",
+    title: "Front-End Development",
+    description:
+      "Transitioned into Front-End Development,combining strong programming fundamentals with HTML, CSS, JavaScript and React to build responsive and user-focused web experiences.",
+  },
+
+  {
+    year: "2025",
+    title: "WordPress Development & Maintenance",
+    description:
+      "Developed and maintained WordPress websites, handling themes, databases, plugins, updates, troubleshooting, and overall website maintenance.",
+  },
+
+  {
+    year: "2025",
     title: "React, Git & GitHub",
     description:
       "Moved to component-based development with React and adopted Git and GitHub for version control.",
   },
+
   {
-    year: "2025",
+    year: "2026",
     title: "Team-based React Project",
     description:
-      "Worked with a team on a React project, developing a Blog Details page and its responsive behaviour.",
+      "Worked with a team on a React project, developing Dark & light mood moreover a Blog Details page and its authentication & authorization related to registration forms in addition to responsive behaviour.",
   },
   {
     year: "Now",

@@ -1,6 +1,6 @@
-import synkraImage from "@/assets/projects/synkra-project.png.asset.json";
-import portfolioImage from "@/assets/projects/portfolio-project.png.asset.json";
-import cafeImage from "@/assets/projects/cafe-project.png.asset.json";
+import bonashmawyCafe from "../assets/projects/Bonashmawy-Cafe.png";
+import personalPortfolio from "../assets/projects/Personal-portfolio.png";
+import synkraCompany from "../assets/projects/Synkra-company.png";
 
 export type Project = {
   title: string;
@@ -20,14 +20,14 @@ export type Project = {
 
 const projects: Project[] = [
   {
-    title: "Synkra Blog Details",
+    title: "Synkra software company",
     description: "A responsive Blog Details page developed with React as part of a team project.",
     technologies: ["React", "JavaScript", "CSS", "Git", "GitHub"],
     role: "Front-End Developer",
     contribution: "Developed the Blog Details page and worked on responsive implementation.",
     liveDemo: "https://mhmedamer.github.io/Synkra-company/",
     github: "",
-    image: synkraImage.url,
+    image: synkraCompany,
     imageAlt: "Synkra website sign-in page",
   },
   {
@@ -38,7 +38,7 @@ const projects: Project[] = [
     liveDemo: "/",
     liveLabel: "Current Website",
     github: "",
-    image: portfolioImage.url,
+    image: personalPortfolio,
     imageAlt: "Muhammed Amer personal portfolio homepage",
   },
   {
@@ -48,7 +48,7 @@ const projects: Project[] = [
     technologies: ["HTML", "CSS", "JavaScript"],
     liveDemo: "https://mhmedamer.github.io/bonashmawy/",
     github: "",
-    image: cafeImage.url,
+    image: bonashmawyCafe,
     imageAlt: "Bon Ashmawy café website homepage",
   },
 ];

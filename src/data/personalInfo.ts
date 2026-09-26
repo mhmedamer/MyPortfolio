@@ -13,8 +13,8 @@ const personalInfo = {
   phoneDisplay: "+20 101 257 5937",
   whatsapp: "201012575937",
   location: "Egypt",
-  github: "", // e.g. "https://github.com/username"
-  linkedin: "", // e.g. "https://www.linkedin.com/in/username"
+  github: "https://github.com/mhmedamer",
+  linkedin: "www.linkedin.com/in/muhammed-amer-549a4631a",
   resume: "", // e.g. "/resume/muhammed-amer-cv.pdf"
 };
 

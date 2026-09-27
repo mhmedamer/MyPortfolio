@@ -1,23 +1,43 @@
-import { type FormEvent, useState } from "react";
+import { type FormEvent, useState, useRef } from "react";
+import emailJs from "@emailjs/browser";
 import { Github, Linkedin, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import personalInfo from "@/data/personalInfo";
 import { Button } from "@/components/Button";
 import { SectionHeading } from "@/components/SectionHeading";
 
-/**
- * The form is UI only. No email service is connected yet, so nothing is sent.
- * To make it work later, send the form values to your service inside handleSubmit.
- */
+const EMAILJS_SERVICE_ID = "service_6we4p4c";
+const EMAILJS_TEMPLATE_ID = "template_zr9zgwm";
+const EMAILJS_PUBLIC_KEY = "fIlOIFYgMXrmoUEp7";
+
 export function Contact() {
   const [notice, setNotice] = useState("");
+  const [isSending, setIsSending] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setNotice(
-      "This form is not connected to an email service yet. Please reach me by email or WhatsApp in the meantime.",
-    );
-  };
+    if (!formRef.current) return;
+    setIsSending(true);
+    setNotice("");
 
+    emailJs
+      .sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formRef.current, {
+        publicKey: EMAILJS_PUBLIC_KEY,
+      })
+      .then(() => {
+        setNotice("Message sent successfully! I'll get back to you right away.");
+        formRef.current?.reset();
+      })
+      .catch((error) => {
+        console.error("EmailJS error:", error);
+        setNotice(
+          "Something went wrong while sending. Please try again or reach me by email directly.",
+        );
+      })
+      .finally(() => {
+        setIsSending(false);
+      });
+  };
   const details = [
     {
       icon: Mail,
@@ -107,7 +127,7 @@ export function Contact() {
             </li>
           </ul>
 
-          <form onSubmit={handleSubmit} className="card-surface p-6" data-reveal>
+          <form ref={formRef} onSubmit={handleSubmit} className="card-surface p-6" data-reveal>
             <div className="space-y-4">
               <div>
                 <label htmlFor="name" className="mb-1.5 block text-sm font-medium">
@@ -147,8 +167,8 @@ export function Contact() {
                   className="w-full resize-y rounded-lg border border-input bg-background px-3 py-2.5 text-sm transition-colors focus:border-primary"
                 />
               </div>
-              <Button type="submit" className="w-full">
-                Send Message
+              <Button type="submit" className="w-full" disabled={isSending}>
+                {isSending ? "sending..." : "Send Message"}
               </Button>
               <p
                 className="text-xs leading-relaxed text-muted-foreground"

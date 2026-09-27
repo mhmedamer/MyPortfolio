@@ -1,9 +1,10 @@
 import { type FormEvent, useState, useRef } from "react";
 import emailJs from "@emailjs/browser";
-import { Github, Linkedin, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin, MessageCircle, Phone, Pointer } from "lucide-react";
 import personalInfo from "@/data/personalInfo";
 import { Button } from "@/components/Button";
 import { SectionHeading } from "@/components/SectionHeading";
+import { cursorTo } from "node:readline";
 
 const EMAILJS_SERVICE_ID = "service_6we4p4c";
 const EMAILJS_TEMPLATE_ID = "template_zr9zgwm";
@@ -25,13 +26,13 @@ export function Contact() {
         publicKey: EMAILJS_PUBLIC_KEY,
       })
       .then(() => {
-        setNotice("Message sent successfully! I'll get back to you right away.");
+        setNotice("Message sent successfully! I'll get back to you right away");
         formRef.current?.reset();
       })
       .catch((error) => {
         console.error("EmailJS error:", error);
         setNotice(
-          "Something went wrong while sending. Please try again or reach me by email directly.",
+          "Something went wrong while sending. Please try again or reach me by email directly",
         );
       })
       .finally(() => {
@@ -167,14 +168,16 @@ export function Contact() {
                   className="w-full resize-y rounded-lg border border-input bg-background px-3 py-2.5 text-sm transition-colors focus:border-primary"
                 />
               </div>
-              <Button type="submit" className="w-full" disabled={isSending}>
+              <Button type="submit" className="w-full cursor-pointer" disabled={isSending}>
                 {isSending ? "sending..." : "Send Message"}
               </Button>
               <p
                 className="text-xs leading-relaxed text-muted-foreground"
                 role="status"
                 aria-live="polite"
-              ></p>
+              >
+                {notice}
+              </p>
             </div>
           </form>
         </div>
